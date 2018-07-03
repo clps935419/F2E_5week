@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #f2f2f2; }
+
+.wrap {
+  width: 100%;
+  height: auto; }
+  .wrap .header {
+    width: 100%;
+    height: 74px;
+    background: #000000;
+    text-align: center;
+    overflow: hidden; }
+    .wrap .header h1 {
+      font-family: Roboto-BlackItalic;
+      font-size: 36px;
+      color: #50FF44;
+      margin: 16px 0;
+      font-weight: bolder; }
+  .wrap .ad {
+    position: relative;
+    width: 620px;
+    height: 120px;
+    margin: 24px auto; }
+    .wrap .ad img {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      max-width: 620px;
+      margin: 0 auto;
+      display: block;
+      -webkit-animation: round 9s linear infinite;
+      animation: round 9s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .wrap .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .wrap .container .cover {
+      width: 288px;
+      height: 434px;
+      background: url(../img/comic-cover.png) no-repeat;
+      background-size: contain;
+      border: 4px solid #000000; }
+    .wrap .container .content {
+      width: 317px; }
+      .wrap .container .content h2 {
+        font-family: Roboto-Bold;
+        font-size: 36px;
+        color: #FFFFFF;
+        line-height: 52px;
+        height: 52px;
+        background: #000;
+        font-weight: bolder;
+        text-align: center; }
+      .wrap .container .content .text {
+        margin-top: 24px; }
+        .wrap .container .content .text h3 {
+          font-family: Roboto-Bold;
+          font-size: 20px;
+          color: #000000;
+          line-height: 24px;
+          display: inline;
+          padding-left: 20px;
+          font-weight: bolder; }
+        .wrap .container .content .text span {
+          font-family: Roboto-Regular;
+          font-size: 16px;
+          color: #000000;
+          line-height: 24px;
+          float: right;
+          padding-right: 30px; }
+        .wrap .container .content .text h4 {
+          font-family: Roboto-Bold;
+          font-size: 20px;
+          color: #000000;
+          line-height: 24px;
+          padding-left: 20px;
+          font-weight: bolder;
+          margin-top: 24px; }
+        .wrap .container .content .text p {
+          font-family: Roboto-Regular;
+          font-size: 16px;
+          color: #000000;
+          line-height: 24px;
+          padding-left: 20px; }
+  .wrap .footer {
+    margin: 0 auto;
+    width: 620px; }
+    .wrap .footer h2 {
+      font-family: Roboto-Bold;
+      font-size: 24px;
+      line-height: 44px;
+      text-align: center;
+      color: #FFFFFF;
+      font-weight: bolder;
+      background: #000;
+      width: 181px;
+      height: 44px; }
+    .wrap .footer .f-content {
+      width: 616px;
+      height: 102px;
+      border: 4px solid #000000;
+      background: #FFFFFF; }
+      .wrap .footer .f-content .num {
+        padding-top: 22px; }
+        .wrap .footer .f-content .num h3 {
+          font-family: Roboto-Bold;
+          font-size: 16px;
+          color: #000000;
+          line-height: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          padding-left: 24px; }
+        .wrap .footer .f-content .num h3:hover {
+          background: #000;
+          color: white; }
+        .wrap .footer .f-content .num span {
+          background: #50FF44;
+          font-family: Roboto-Bold;
+          font-size: 14px;
+          color: #000000;
+          line-height: 14px;
+          margin-left: 10px;
+          padding: 3px 5px;
+          -webkit-animation: shiny 1s infinite;
+          animation: shiny 1s infinite; }
+
+@-webkit-keyframes shiny {
+  from {
+    border: none; }
+  to {
+    border: 2px yellow solid; } }
+
+@keyframes shiny {
+  from {
+    border: none; }
+  to {
+    border: 2px yellow solid; } }
+
+@-webkit-keyframes round {
+  4% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* 0 - 1秒 淡入*/
+    z-index: 1; }
+  30% {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    /* 1- 5秒靜止*/ }
+  60% {
+    opacity: 0;
+    filter: alpha(opacity=10);
+    /* 5-6秒淡出*/
+    z-index: -1; } }
+
+@keyframes round {
+  4% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* 0 - 1秒 淡入*/
+    z-index: 1; }
+  30% {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    /* 1- 5秒靜止*/ }
+  60% {
+    opacity: 0;
+    filter: alpha(opacity=10);
+    /* 5-6秒淡出*/
+    z-index: -1; } }
+
+.ad img:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+.ad img:nth-child(2) {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
